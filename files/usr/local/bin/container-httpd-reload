@@ -1,0 +1,4 @@
+#!/bin/bash
+
+HTTPD_PID=$(cat /var/run/httpd/httpd.pid)
+kill -s SIGUSR1 "$HTTPD_PID"

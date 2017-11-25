@@ -7,5 +7,5 @@ set -euxo pipefail
 yum -y reinstall glibc-common
 yum -y install epel-release
 
-yum -y install httpd mod_ssl
+yum -y install awstats httpd mod_ssl
 yum clean all

@@ -2,10 +2,11 @@
 
 set -euxo pipefail
 
+dnf config-manager --set-enabled powertools
 
 # CentOS image comes cleaned of locales, reinstall them
-yum -y reinstall glibc-common
-yum -y install epel-release
+dnf -y reinstall glibc-common
+dnf -y install epel-release
 
-yum -y install awstats httpd mod_ssl
-yum clean all
+dnf -y install awstats httpd mod_ssl
+dnf clean all

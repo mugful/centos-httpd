@@ -2,6 +2,7 @@
 
 set -euxo pipefail
 
+dnf -y install 'dnf-command(config-manager)'
 dnf config-manager --set-enabled powertools
 
 # CentOS image comes cleaned of locales, reinstall them

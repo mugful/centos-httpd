@@ -1,6 +1,3 @@
 #!/bin/bash
 
-# deal with leftover pidfile when restarting the container
-rm -f /var/run/httpd/httpd.pid
-
-/usr/sbin/httpd -DFOREGROUND
+exec /usr/sbin/httpd -DFOREGROUND
